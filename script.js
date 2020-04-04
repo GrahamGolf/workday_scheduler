@@ -1,7 +1,18 @@
 $( document ).ready(function() {
     //if statement so it doesn't error out when theres nothing
-    $("#input09").val(localStorage.getItem("hour09")); //figure this out
-    $( ".button" ).click(function() {
+    $("#input08").val(localStorage.getItem("hour08"));
+    $("#input09").val(localStorage.getItem("hour09"));
+    $("#input10").val(localStorage.getItem("hour10"));
+    $("#input11").val(localStorage.getItem("hour11"));
+    $("#input12").val(localStorage.getItem("hour12"));
+    $("#input13").val(localStorage.getItem("hour13"));
+    $("#input14").val(localStorage.getItem("hour14"));
+    $("#input15").val(localStorage.getItem("hour15"));
+    $("#input16").val(localStorage.getItem("hour16"));
+    $("#input17").val(localStorage.getItem("hour17"));
+    $("#input18").val(localStorage.getItem("hour18"));
+
+    $( ".saveBtn" ).click(function() {
         var inputText = ($(this)[0].previousElementSibling.value)
         console.log ($(this))
         var time = ($(this)[0].parentElement.id)
@@ -18,7 +29,7 @@ $( document ).ready(function() {
             console.log(currentHour);
         }
 
-      $(".hours").each(function() {
+      $(".hour").each(function() {
             var hourBlock = parseInt(($(this).attr("id")).substring(4));
             console.log(hourBlock)
         if (currentHour > hourBlock) {
